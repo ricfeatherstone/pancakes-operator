@@ -1,0 +1,34 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: manager-role
+  namespace: pancakes-operator-system
+rules:
+- apiGroups:
+  - pancakes.ricfeatherstone.com
+  resources:
+  - batches
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pancakes.ricfeatherstone.com
+  resources:
+  - batches/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - pancakes.ricfeatherstone.com
+  resources:
+  - batches/status
+  verbs:
+  - get
+  - patch
+  - update

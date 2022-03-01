@@ -1,0 +1,24 @@
+apiVersion: pancakes.ricfeatherstone.com/v1alpha1
+kind: Batch
+metadata:
+  name: batch-sample
+spec:
+  flour:
+    amount: 100
+    type: Plain
+    weight: Grams
+  eggs:
+    number: 2
+    size: Large
+  milk:
+    amount: 300
+    unit: MilliLitre
+  oil:
+    amount: 1
+    type: Vegetable
+    unit: TableSpoon
+  lemonWedges:
+    number: 4
+  sugar:
+    amount: 3
+    unit: Grams

@@ -6,4 +6,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: pancake-operator
 repo: github.com/ricfeatherstone/pancakes-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: ricfeatherstone.com
+  group: pancakes
+  kind: Batch
+  path: github.com/ricfeatherstone/pancakes-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
