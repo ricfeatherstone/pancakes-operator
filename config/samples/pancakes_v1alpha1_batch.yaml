@@ -6,7 +6,7 @@ spec:
   flour:
     amount: 100
     type: Plain
-    weight: Grams
+    weight: Gram
   eggs:
     number: 2
     size: Large
@@ -17,8 +17,8 @@ spec:
     amount: 1
     type: Vegetable
     unit: TableSpoon
-  lemonWedges:
+  lemonToServe:
     number: 4
-  sugar:
+  sugarToServe:
     amount: 3
-    unit: Grams
+    unit: Gram

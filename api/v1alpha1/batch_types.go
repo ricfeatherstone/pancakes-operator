@@ -28,7 +28,7 @@ type Flour struct {
 	// Amount the amount of flour
 	Amount int `json:"amount"`
 	// Weight the weight of flour
-	// +kubebuilder:validation:Enum=Grams;Kilograms
+	// +kubebuilder:validation:Enum=Gram;KiloGram
 	Weight string `json:"weight"`
 }
 
@@ -72,8 +72,8 @@ type Sugar struct {
 	// Amount the amount of sugar
 	Amount int `json:"amount"`
 	// Unit the measuring unit
-	// +kubebuilder:validation:Enum=Grams;Kilograms
-	Unit string `json:"unit"`
+	// +kubebuilder:validation:Enum=Gram;KiloGram
+	Unit string `json:"unit,omitempty"`
 }
 
 // BatchSpec defines the desired state of Batch
@@ -82,14 +82,14 @@ type BatchSpec struct {
 	Flour `json:"flour"`
 	// Eggs the eggs to use.
 	Eggs `json:"eggs"`
-	// Oil the oil to use.
-	Milk `json:"milk"`
 	// Milk the milk to use.
+	Milk `json:"milk"`
+	// Oil the oil to use.
 	Oil `json:"oil"`
-	// LemonWedges the lemon wedges to use.
-	LemonWedges `json:"lemonWedges,omitempty"`
-	// Sugar the sugar to use.
-	Sugar `json:"sugar,omitempty"`
+	// LemonToServe the lemon wedges to use when serving.
+	LemonToServe LemonWedges `json:"lemonToServe,omitempty"`
+	// SugarToServe the sugar to use when serving.
+	SugarToServe Sugar `json:"sugarToServe,omitempty"`
 }
 
 // BatchStatus defines the observed state of Batch

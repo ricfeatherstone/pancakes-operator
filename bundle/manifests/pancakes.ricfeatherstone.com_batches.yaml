@@ -66,16 +66,16 @@ spec:
                   weight:
                     description: Weight the weight of flour
                     enum:
-                    - Grams
-                    - Kilograms
+                    - Gram
+                    - KiloGram
                     type: string
                 required:
                 - amount
                 - type
                 - weight
                 type: object
-              lemonWedges:
-                description: LemonWedges the lemon wedges to use.
+              lemonToServe:
+                description: LemonToServe the lemon wedges to use when serving.
                 properties:
                   number:
                     type: integer
@@ -83,7 +83,7 @@ spec:
                 - number
                 type: object
               milk:
-                description: Oil the oil to use.
+                description: Milk the milk to use.
                 properties:
                   amount:
                     description: Amount the amount of milk
@@ -99,7 +99,7 @@ spec:
                 - unit
                 type: object
               oil:
-                description: Milk the milk to use.
+                description: Oil the oil to use.
                 properties:
                   amount:
                     description: Amount the amount of oil
@@ -121,8 +121,8 @@ spec:
                 - type
                 - unit
                 type: object
-              sugar:
-                description: Sugar the sugar to use.
+              sugarToServe:
+                description: SugarToServe the sugar to use when serving.
                 properties:
                   amount:
                     description: Amount the amount of sugar
@@ -130,12 +130,11 @@ spec:
                   unit:
                     description: Unit the measuring unit
                     enum:
-                    - Grams
-                    - Kilograms
+                    - Gram
+                    - KiloGram
                     type: string
                 required:
                 - amount
-                - unit
                 type: object
             required:
             - eggs
