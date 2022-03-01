@@ -1,1 +1,3 @@
-# pancake-operator
+# Pancakes Operator
+
+![](docs/images/pancakes.png)
